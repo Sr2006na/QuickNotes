@@ -2,6 +2,9 @@
 
 A simple and intuitive note-taking application built with HTML, CSS, and JavaScript. This app allows users to create, edit, and delete notes, which are stored locally in the browser's localStorage.
 
+👉 **[Live](https://sr2006na.github.io/QuickNotes/)** 👈
+
+
 ---
 ## Features 
 
