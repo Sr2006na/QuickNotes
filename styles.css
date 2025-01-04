@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.input-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.input-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-card input,
+.input-card textarea {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-card input:focus,
+.input-card textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.input-card textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.input-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-card button:hover {
+    background-color: #218838;
+}
+
+#notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    padding: 16px; 
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+}
+
+.note-card.fade-out {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.note-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    padding-right: 40px;
+    
+    
+}
+
+.note-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.note-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.note-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.note-buttons button:hover {
+    color: #000;
+}
+
+.empty-state {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
+#confirm-modal .modal-content {
+    width: 300px;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.confirm-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#confirm-yes {
+    background-color: #dc3545;
+    color: white;
+}
+
+#confirm-yes:hover {
+    background-color: #c82333;
+}
+
+#confirm-no {
+    background-color: #6c757d;
+    color: white;
+}
+
+#confirm-no:hover {
+    background-color: #5a6268;
+}
+
+.made-by {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.made-by a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.made-by a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .note-card h3 {
+        font-size: 16px; /* Smaller title font for mobile */
+    }
+
+    .note-card p {
+        font-size: 12px; /* Smaller content font for mobile */
+    }
+}
